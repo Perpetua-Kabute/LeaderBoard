@@ -5,6 +5,10 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
+    android{
+        buildFeatures.dataBinding=true
+        buildFeatures.viewBinding=true
+    }
 
     defaultConfig {
         applicationId "com.example.leaderboard"
