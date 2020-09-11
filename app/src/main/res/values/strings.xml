@@ -3,4 +3,6 @@
     <string name="title_activity_leader_board">LeaderBoard</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="activity_name">LEADERBOARD</string>
+    <string name="text_submit">Submit</string>
 </resources>
