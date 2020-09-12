@@ -8,4 +8,7 @@ interface TopskillLearnersService {
 
     @GET("/api/hours")
     fun getTopLearners():Deferred<List<TopLearners>>
+
+    @GET("/api/skilliq")
+    fun getTopSkillIq():Deferred<List<TopSkillIq>>
 }
