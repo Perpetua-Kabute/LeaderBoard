@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.view.View
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +16,8 @@ class MainActivity : AppCompatActivity() {
        // window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
         //actionBar?.hide()
-        Handler().postDelayed({
+        Looper.myLooper()?.let {
+        Handler(it).postDelayed({
             // This method will be executed once the timer is over
             // Start your app main activity
 
@@ -24,5 +26,6 @@ class MainActivity : AppCompatActivity() {
             // close this activity
             finish()
         }, SPLASH_TIME_OUT)
+        }
     }
 }
