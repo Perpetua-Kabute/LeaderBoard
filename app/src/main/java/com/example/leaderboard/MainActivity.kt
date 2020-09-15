@@ -27,5 +27,6 @@ class MainActivity : AppCompatActivity() {
             finish()
         }, SPLASH_TIME_OUT)
         }
+
     }
 }
