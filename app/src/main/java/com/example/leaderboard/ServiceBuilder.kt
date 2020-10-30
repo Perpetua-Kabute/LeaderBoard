@@ -3,6 +3,7 @@ package com.example.leaderboard
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 
 object ServiceBuilder {
     val baseurl = "https://gadsapi.herokuapp.com"
@@ -11,5 +12,5 @@ object ServiceBuilder {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-
+    val service:TopskillLearnersService = retrofit.create(TopskillLearnersService::class.java)
 }
