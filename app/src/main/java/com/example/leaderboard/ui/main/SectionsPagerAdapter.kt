@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.example.leaderboard.R
+import com.example.leaderboard.ui.main.PlaceholderFragment.Companion.newInstance
+import java.lang.reflect.Array.newInstance
 
 private val TAB_TITLES = arrayOf(
     R.string.tab_text_1,
@@ -22,8 +24,13 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
         //return 2 fragment
-        return PlaceholderFragment.newInstance(position + 1)
+        when (position) {
+            0 -> return PlaceholderFragment.newInstance(0)
+            1 -> return SkillIqFragment.newInstance(1)
+            else -> return null!!
+        }
     }
+
 
     override fun getPageTitle(position: Int): CharSequence? {
         //title here
