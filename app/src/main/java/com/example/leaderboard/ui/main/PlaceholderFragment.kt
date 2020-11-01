@@ -56,6 +56,7 @@ class PlaceholderFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val call2 = service.postData2(Posts("name"))
 
         val call:Call<List<TopLearners>> = service.getTopLearners()
         call.enqueue(object: Callback<List<TopLearners>>{
