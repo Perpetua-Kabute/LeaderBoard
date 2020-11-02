@@ -17,13 +17,13 @@ interface TopskillLearnersService {
     @GET("/api/skilliq")
     fun getTopSkillIq(): Call<List<TopSkillIq>>
 
-    @POST("")
-    fun postData(
-        @Field("name")name:String
-    )
-    @POST("")
-    fun postData2(
-        @Body data: Posts
-    ): Call<Posts>
+//    @POST("")
+//    fun postData(
+//        @Field("name")name:String
+//    )
+//    @POST("")
+//    fun postData2(
+//        @Body data: Posts
+//    ): Call<Posts>
 
 }
